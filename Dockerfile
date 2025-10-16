@@ -1,22 +1,13 @@
-# Use Node.js 20 (Alpine is a lightweight Linux)
-FROM node:20-alpine
-
-# Set working directory inside the container
+# Stage 1 - build
+FROM node:20-alpine AS build
 WORKDIR /app
-
-# Copy package.json and package-lock.json (if exists)
 COPY package*.json ./
-
-# Install dependencies
 RUN npm install
-
-# Copy all project files
 COPY . .
+RUN npm run build
 
-# Expose port 3000
-EXPOSE 3000
-
-# Command to start the app
-CMD ["npm", "start"]
-
-
+# Stage 2 - serve
+FROM nginx:alpine
+COPY --from=build /app/build /usr/share/nginx/html
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]

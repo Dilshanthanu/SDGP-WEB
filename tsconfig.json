@@ -1,32 +1,32 @@
 {
-	"compilerOptions": {
-		"target": "es6",
-		"lib": ["dom", "dom.iterable", "esnext"],
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["src/*"],
-			"@/services/*": ["src/services/*"],
-			"@/_assets/*": ["src/_assets/*"],
-			"@/componentxs/*": ["src/components/*"],
-			"@/config/*": ["src/config/*"],
-			"@/store/*": ["src/redux/*"],
-			"@/utils/*": ["src/utils/*"]
-		},
-		"allowJs": true,
-		"skipLibCheck": true,
-		"esModuleInterop": true,
-		"allowSyntheticDefaultImports": true,
-		"strict": true,
-		"forceConsistentCasingInFileNames": true,
-		"noFallthroughCasesInSwitch": true,
-		"module": "nodenext",
-		"moduleResolution": "node16",
-		"resolveJsonModule": true,
-		"isolatedModules": true,
-		"noEmit": true,
-		"jsx": "react-jsx",
-		"noImplicitAny": true
-	},
-	"include": ["src", "src/_types"],
-	"exclude": ["node_modules", ".vscode"]
+  "compilerOptions": {
+    "target": "es6",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/services/*": ["src/services/*"],
+      "@/_assets/*": ["src/_assets/*"],
+      "@/componentxs/*": ["src/components/*"],
+      "@/config/*": ["src/config/*"],
+      "@/store/*": ["src/redux/*"],
+      "@/utils/*": ["src/utils/*"]
+    },
+    "allowJs": true,
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noFallthroughCasesInSwitch": true,
+    "module": "nodenext",
+    "moduleResolution": "node16",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+    "noImplicitAny": true
+  },
+  "include": ["src", "src/_types"],
+  "exclude": ["node_modules", ".vscode"]
 }
